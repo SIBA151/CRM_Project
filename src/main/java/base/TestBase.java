@@ -16,6 +16,7 @@ public class TestBase {
 	public static Properties prop;
 	
 	public TestBase() {
+		
 		String propFilePath=System.getProperty("user.dir")+"\\config\\config.properties";
 		prop=new Properties();
 		try{
