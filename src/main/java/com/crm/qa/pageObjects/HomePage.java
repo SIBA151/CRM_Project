@@ -12,8 +12,11 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//td[contains(text(),'User: R Siba Kumar Reddy')]") 
 	WebElement userNameLabel;
 	
-	@FindBy(xpath="//a[contains(text(), 'Calendar')]")
-	WebElement calenderLink;
+	@FindBy(xpath="//a[@title='Companies']")
+	WebElement companiesLink;
+	
+	@FindBy(xpath="//a[@title='New Company']")
+	WebElement newCompanyLink;
 	
 	@FindBy(xpath="//a[contains(text(),'Contacts')]")
 	WebElement contactsLink;
@@ -36,10 +39,18 @@ public class HomePage extends TestBase{
 		return userNameLabel.isDisplayed();
 	}
 	
-	public CalenderPage clickOnCalnderLink() {
-		calenderLink.click();
-		return new CalenderPage();
+	public CompaniesPage clickOnCompanyLink() {
+		companiesLink.click();
+		return new CompaniesPage();
 	}
+	
+	public CompaniesPage clickOnNewCompanyLink() {
+		Actions action=new Actions(driver);
+		action.moveToElement(companiesLink).build().perform();
+		action.moveToElement(newCompanyLink).click().perform();
+		return new CompaniesPage();
+	}
+	
 	public ContactsPage clickOnContactsLink() {
 		contactsLink.click();
 		return new ContactsPage();

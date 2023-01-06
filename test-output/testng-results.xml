@@ -1,49 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="3" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47049" started-at="2023-01-05T12:18:17 IST" finished-at="2023-01-05T12:19:04 IST">
+  <suite name="Default suite" duration-ms="49017" started-at="2023-01-06T09:56:37 IST" finished-at="2023-01-06T09:57:26 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47049" started-at="2023-01-05T12:18:17 IST" finished-at="2023-01-05T12:19:04 IST">
-      <class name="com.crm.qa.pageTests.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="setup" is-config="true" duration-ms="14102" started-at="2023-01-05T12:18:17 IST" finished-at="2023-01-05T12:18:31 IST">
+    <test name="Default test" duration-ms="49017" started-at="2023-01-06T09:56:37 IST" finished-at="2023-01-06T09:57:26 IST">
+      <class name="com.crm.qa.pageTests.CompaniesPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9]" name="setUp" is-config="true" duration-ms="19438" started-at="2023-01-06T09:56:38 IST" finished-at="2023-01-06T09:56:57 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="loginPageTitleTest" duration-ms="33" started-at="2023-01-05T12:18:31 IST" finished-at="2023-01-05T12:18:31 IST">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createNewCompanies(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9]" name="createNewCompanies" duration-ms="3873" started-at="2023-01-06T09:56:57 IST" data-provider="getCreateNewCompaniesData" finished-at="2023-01-06T09:57:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Facebook]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[IT]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10005.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[New]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Email]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="tearDown" is-config="true" duration-ms="1035" started-at="2023-01-05T12:18:31 IST" finished-at="2023-01-05T12:18:32 IST">
+        </test-method> <!-- createNewCompanies -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9]" name="tearDown" is-config="true" duration-ms="1562" started-at="2023-01-06T09:57:01 IST" finished-at="2023-01-06T09:57:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createNewCompanies status=SUCCESS method=CompaniesPageTest.createNewCompanies(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="setup" is-config="true" duration-ms="11765" started-at="2023-01-05T12:18:32 IST" finished-at="2023-01-05T12:18:44 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9]" name="setUp" is-config="true" duration-ms="17607" started-at="2023-01-06T09:57:03 IST" finished-at="2023-01-06T09:57:20 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginPageLogoTest()[pri:2, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="loginPageLogoTest" duration-ms="119" started-at="2023-01-05T12:18:44 IST" finished-at="2023-01-05T12:18:44 IST">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createNewCompanies(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9]" name="createNewCompanies" duration-ms="3646" started-at="2023-01-06T09:57:20 IST" data-provider="getCreateNewCompaniesData" finished-at="2023-01-06T09:57:24 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[HP]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hardware]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5263.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Event]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageLogoTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="tearDown" is-config="true" duration-ms="901" started-at="2023-01-05T12:18:44 IST" finished-at="2023-01-05T12:18:45 IST">
+        </test-method> <!-- createNewCompanies -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9]" name="tearDown" is-config="true" duration-ms="1453" started-at="2023-01-06T09:57:24 IST" finished-at="2023-01-06T09:57:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createNewCompanies status=SUCCESS method=CompaniesPageTest.createNewCompanies(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.crm.qa.pageTests.CompaniesPageTest@67b467e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="setup" is-config="true" duration-ms="10498" started-at="2023-01-05T12:18:45 IST" finished-at="2023-01-05T12:18:55 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="loginTest" duration-ms="7431" started-at="2023-01-05T12:18:55 IST" finished-at="2023-01-05T12:19:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.pageTests.LoginPageTest@eb21112]" name="tearDown" is-config="true" duration-ms="1059" started-at="2023-01-05T12:19:03 IST" finished-at="2023-01-05T12:19:04 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.crm.qa.pageTests.LoginPageTest -->
+      </class> <!-- com.crm.qa.pageTests.CompaniesPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

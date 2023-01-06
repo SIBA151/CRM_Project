@@ -34,7 +34,7 @@ public class ContactsPageTest extends TestBase{
 	
 	
 	@Test(priority=1, enabled=true)
-	public void verifycontactsPageLabel() {
+	public void verifyContactsPageLabel() {
 		Assert.assertTrue(contactsPage.verifyContactsLabel());
 	}
 	
