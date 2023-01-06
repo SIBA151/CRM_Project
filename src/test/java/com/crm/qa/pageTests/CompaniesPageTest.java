@@ -4,16 +4,14 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.crm.qa.Utility.TestUtility;
+import com.crm.qa.base.TestBase;
 import com.crm.qa.pageObjects.CompaniesPage;
 import com.crm.qa.pageObjects.HomePage;
 import com.crm.qa.pageObjects.LoginPage;
-
-import Utility.TestUtility;
-import base.TestBase;
 
 public class CompaniesPageTest extends TestBase {
 	LoginPage loginPage;
@@ -34,17 +32,17 @@ public class CompaniesPageTest extends TestBase {
 	}
 	
 	
-	@Test(priority=1, enabled=false)
+	@Test(priority=1, enabled=true)
 	public void verifyNewCompaniesPageLabel() {
 		Assert.assertTrue(companiesPage.verifyCreateNewCompaniesLabel());
 	}
 	
-	@Test(priority=2, enabled=false)
+	@Test(priority=2, enabled=true)
 	public void verifyNewCompaniesPageTagLabel() {
 		Assert.assertTrue(companiesPage.verifyCompaniesTagLabel());
 	}
 	
-	@Test(priority=3, enabled=false)
+	@Test(priority=3, enabled=true)
 	public void verifyNewCompaniesPageDescriptionLabel() {
 		Assert.assertTrue(companiesPage.verifyCompaniesDescriptionLabel());
 	}
@@ -55,10 +53,15 @@ public class CompaniesPageTest extends TestBase {
 		return data;
 	}
 	
-	@Test(priority=4, dataProvider="getCreateNewCompaniesData")
+	@Test(priority=4, dataProvider="getCreateNewCompaniesData", enabled=true)
 	public void createNewCompanies(String comName, String indName, String numOfEmp, String staSelect, String sourelect) {
 		companiesPage.createNewCompanies(comName, indName, numOfEmp, staSelect, sourelect);
 		
+	}
+	@Test(priority=5, dataProvider="getCreateNewCompaniesData", enabled=true)
+	public void VerifydeletecreateNewCompanies(String comName, String indName, String numOfEmp, String staSelect, String sourelect) {
+		homePage.clickOnCompanyLink();
+		companiesPage.deleteCreateNewCompanies(comName);
 	}
 	
 	@AfterMethod 

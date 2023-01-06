@@ -1,11 +1,13 @@
 package com.crm.qa.pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import base.TestBase;
+import com.crm.qa.base.TestBase;
 
 public class CompaniesPage extends TestBase {
 	
@@ -39,6 +41,15 @@ public class CompaniesPage extends TestBase {
 	@FindBy(xpath="//form[@id='companyForm']/table/tbody/tr[8]/td/input")
 	WebElement SaveBtn;
 	
+	@FindBy(xpath="//a[@context='company']")
+	List<WebElement> compainesName;
+	
+	@FindBy(xpath="//input[@name='client_id']")
+	List<WebElement> checkBox;
+	
+	@FindBy(xpath="//input[@value='Delete Checked']")
+	WebElement deleteCheckedBtn;
+	
 	public CompaniesPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -64,6 +75,17 @@ public class CompaniesPage extends TestBase {
 		Select selectSo=new Select(source);
 		selectSo.selectByVisibleText(sourelect);
 		SaveBtn.click();
+	}
+	
+	public void deleteCreateNewCompanies(String comName) {
+		for(int i=0; i<compainesName.size(); i++) {
+		String s=compainesName.get(i).getText();
+		if(s.equals(comName)) {
+			checkBox.get(i+1).click();
+			deleteCheckedBtn.click();
+			driver.switchTo().alert().accept();
+		}
+		}
 	}
 	
 

@@ -5,8 +5,8 @@
     <classes>
       <class name="com.crm.qa.pageTests.CompaniesPageTest">
         <methods>
-          <include name="createNewCompanies"/>
           <include name="tearDown"/>
+          <include name="VerifydeletecreateNewCompanies" invocation-numbers="0 1"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.crm.qa.pageTests.CompaniesPageTest -->
