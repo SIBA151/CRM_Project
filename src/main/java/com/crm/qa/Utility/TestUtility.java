@@ -1,4 +1,4 @@
-package Utility;
+package com.crm.qa.Utility;
 
 
 
@@ -15,7 +15,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import base.TestBase;
+import com.crm.qa.base.TestBase;
 
 public class TestUtility extends TestBase{
 	

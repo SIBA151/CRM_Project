@@ -6,11 +6,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.crm.qa.Utility.TestUtility;
+import com.crm.qa.base.TestBase;
 import com.crm.qa.pageObjects.HomePage;
 import com.crm.qa.pageObjects.LoginPage;
-
-import Utility.TestUtility;
-import base.TestBase;
 
 public class HomePageTest extends TestBase{
 	LoginPage loginPage;
