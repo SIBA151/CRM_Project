@@ -27,6 +27,9 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//a[contains(text(), 'Deals')]")
 	WebElement dealsLink;
 	
+	@FindBy(xpath="//a[contains(@title, 'New Deal')]")
+	WebElement newDealsLink;
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this );
 	}
@@ -59,12 +62,16 @@ public class HomePage extends TestBase{
 		Actions action=new Actions(driver);
 		action.moveToElement(contactsLink).build().perform();
 		action.moveToElement(newContactLink).click().perform();
-		
 	}
 	
 	public DealsPage clickOnDealsLink() {
 		dealsLink.click();
 		return new DealsPage();
+	}
+	public void clickOnNewDealsLink() {
+		Actions action=new Actions(driver);
+		action.moveToElement(dealsLink).build().perform();
+		action.moveToElement(newDealsLink).click().perform();
 	}
 	
 
