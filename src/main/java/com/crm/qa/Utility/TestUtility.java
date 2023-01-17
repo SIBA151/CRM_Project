@@ -56,7 +56,7 @@ public class TestUtility extends TestBase{
 	public static void takeScreenshotAtEndOfTest(WebDriver driver, String screenShotName) {
 		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(source, new File("./ScreenShot/"+System.currentTimeMillis()+".png"));
+			FileUtils.copyFile(source, new File("./ScreenShot/"+screenShotName+System.currentTimeMillis()+".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

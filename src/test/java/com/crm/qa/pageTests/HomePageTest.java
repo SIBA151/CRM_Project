@@ -15,9 +15,6 @@ public class HomePageTest extends TestBase{
 	LoginPage loginPage;
 	HomePage homePage;
 	TestUtility testUtility;
-	public HomePageTest() {
-		super();
-	}
 	
 	@BeforeMethod
 	public void setUp() {

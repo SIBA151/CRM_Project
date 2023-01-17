@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="5" name="TestOnFirefox(failed)" parallel="tests">
-    <parameter name="browser" value="Edge"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.pageTests.HomePageTest">
+      <class name="com.crm.qa.pageTests.ContactsPageTest">
         <methods>
-          <include name="verifyUserNameTest"/>
-          <include name="verifyHomePageTitleTest"/>
-          <include name="tearDown"/>
-          <include name="verifyContactsLink"/>
           <include name="setUp"/>
-        </methods>
-      </class> <!-- com.crm.qa.pageTests.HomePageTest -->
-    </classes>
-  </test> <!-- TestOnFirefox(failed) -->
-  <test thread-count="5" name="TestOnChrome(failed)" parallel="tests">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="com.crm.qa.pageTests.HomePageTest">
-        <methods>
-          <include name="verifyHomePageTitleTest"/>
           <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="verifyContactsPageLabel"/>
+          <include name="validateCreateNewContactinC"/>
         </methods>
-      </class> <!-- com.crm.qa.pageTests.HomePageTest -->
+      </class> <!-- com.crm.qa.pageTests.ContactsPageTest -->
     </classes>
-  </test> <!-- TestOnChrome(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
