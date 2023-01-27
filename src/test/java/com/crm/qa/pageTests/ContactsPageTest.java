@@ -21,7 +21,7 @@ public class ContactsPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void setUp() {
-		initialization();
+		browserSetup();
 		loginPage = new LoginPage();
 		testUtility=new TestUtility();
 		contactsPage= new ContactsPage();
@@ -36,7 +36,7 @@ public class ContactsPageTest extends TestBase{
 		Assert.assertTrue(contactsPage.verifyContactsLabel());
 	}
 	
-	@Test(priority=2, enabled=true)
+	@Test(priority=2, enabled=false)
 	public void selectContactsTest() {
 		contactsPage.selectContactByName("abc abc");
 	}

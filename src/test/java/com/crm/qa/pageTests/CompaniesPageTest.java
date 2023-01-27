@@ -21,7 +21,7 @@ public class CompaniesPageTest extends TestBase {
 	
 	@BeforeMethod
 	public void setUp() {
-		initialization();
+		browserSetup();
 		loginPage=new LoginPage();
 		testUtility=new TestUtility();
 		companiesPage=new CompaniesPage();
@@ -54,12 +54,12 @@ public class CompaniesPageTest extends TestBase {
 	}
 	
 	@Test(priority=4, dataProvider="getCreateNewCompaniesData", enabled=true)
-	public void createNewCompanies(String comName, String indName, String numOfEmp, String staSelect, String sourelect) {
+	public void verifyCreateNewCompanies(String comName, String indName, String numOfEmp, String staSelect, String sourelect) {
 		companiesPage.createNewCompanies(comName, indName, numOfEmp, staSelect, sourelect);
 		
 	}
 	@Test(priority=5, dataProvider="getCreateNewCompaniesData", enabled=true)
-	public void VerifydeletecreateNewCompanies(String comName, String indName, String numOfEmp, String staSelect, String sourelect) {
+	public void verifyDeleteCreatedNewCompanies(String comName, String indName, String numOfEmp, String staSelect, String sourelect) {
 		homePage.clickOnCompanyLink();
 		companiesPage.deleteCreateNewCompanies(comName);
 	}

@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,6 +17,17 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
+	
+	
+	public WebElement getElement(By locator) {
+		WebElement elm = driver.findElement(locator);
+		return elm;
+	}
+	
+	public String getElementText(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
 	
 	public TestBase() {
 		
@@ -31,7 +44,7 @@ public class TestBase {
 		}
 	}
 	
-	public static void initialization() {
+	public static void browserSetup() {
 		String browserName=prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("Chrome")) {
 			driver=new ChromeDriver();
@@ -47,5 +60,7 @@ public class TestBase {
 		
 		driver.get(prop.getProperty("appUrl"));
 	}
+	
+	
 
 }
