@@ -40,13 +40,15 @@ public class ContactsPage extends TestBase{
 		return contactsLabel.isDisplayed();
 	}
 	
+	//click addNewContactButton
+	public void addNewContactBtn() { 
+		NewContactBtn.click();
+	}
+	
 	public void selectContactByName(String name) {
 		driver.findElement(By.xpath("//a[contains(text(), '"+name+"')]//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@type='checkbox']")).click();
 	}
 	
-	public void addNewContactBtn() { 
-		NewContactBtn.click();
-	}
 	
 	public void createNewContact(String tit, String fName, String lName, String comp) {
 		Select select=new Select(title);
