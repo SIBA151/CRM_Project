@@ -36,7 +36,7 @@ public class ContactsPageTest extends TestBase{
 		Assert.assertTrue(contactsPage.verifyContactsLabel());
 	}
 	
-	@Test(priority=2, enabled=false)
+	@Test(priority=2, enabled=true)
 	public void selectContactsTest() {
 		contactsPage.selectContactByName("abc abc");
 	}
@@ -48,7 +48,7 @@ public class ContactsPageTest extends TestBase{
 	}
 	
 	 
-	@Test(priority=4, dataProvider="getCRMTestData", enabled=true)
+	@Test(priority=4, dataProvider="getCRMTestData", enabled=false)
 	public void validateCreateNewContactinC(String title, String firstName, String lastName, String company) {
 		contactsPage.addNewContactBtn();
 		contactsPage.createNewContact(title, firstName, lastName, company);
